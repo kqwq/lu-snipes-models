@@ -1,16 +1,16 @@
 import mongoose from "mongoose";
 
-import { UserSchema } from "./user";
+import { User } from "./userModel.js";
 
-export const SnipeSchema = new mongoose.Schema(
+const schema = new mongoose.Schema(
   {
     messageId: {
       type: String,
       unique: true,
       required: true,
     },
-    senderId: UserSchema, // ID of the user who sent the message
-    victims: [UserSchema],
+    senderId: String, // ID of the user who sent the message
+    victimIds: [String],
     imageUrl: String,
     messageSent: Date,
     messageText: String,
@@ -20,9 +20,11 @@ export const SnipeSchema = new mongoose.Schema(
     votes: [
       {
         userId: String,
-        victims: [UserSchema],
+        victimId: [String],
       },
     ],
   },
   { timestamps: true }
 );
+
+export const Snipe = mongoose.model("Snipe", schema);
