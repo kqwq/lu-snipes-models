@@ -20,7 +20,7 @@ const schema = new mongoose.Schema(
     votes: [
       {
         userId: String,
-        victimId: [String],
+        victimIds: [String],
       },
     ],
   },
