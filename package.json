@@ -1,13 +1,9 @@
 {
   "name": "lu-snipes-models",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kqwq/lu-snipes-models.git"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@kqwq"
+  "dependencies": {
+    "mongoose": "^6.7.1"
   }
 }
